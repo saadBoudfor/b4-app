@@ -1,0 +1,29 @@
+@import "../../../../style/color";
+
+div.input.wrapper {
+  position: relative;
+  padding: 12px;
+  background: $color-light-secondary;
+  border: 1px solid $color-dark-secondary;
+  input {
+    width: 100%;
+    outline: none;
+    border: none;
+    color: $color-dark-secondary;
+  }
+  i.icon {
+    position: absolute;
+    right: 12px;
+    top: 12px;
+    color: $color-dark-secondary;
+  }
+}
+
+div.suggestion {
+  background: $color-light-secondary;
+  border: 1px solid $color-dark-secondary;
+  padding: 12px;
+  color: $color-dark-secondary;
+  font-size: 12px;
+  cursor: pointer;
+}

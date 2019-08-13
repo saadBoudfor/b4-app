@@ -1,0 +1,19 @@
+:root {
+  --color-dark-secondary: #5EA8A7;
+  --color-dark-primary: #257985;
+  --color-light-primary: #EBEBEB;
+  --color-light-secondary: #FFFFFF;
+  --color-light-primary-2: #808080;
+}
+// default values for IE support.
+$color-dark-secondary: #5EA8A7;
+$color-dark-primary: #257985;
+$color-light-primary: #EBEBEB;
+$color-light-secondary: #FFFFFF;
+$color-light-primary-2: #808080;
+// global color values.
+$color-dark-secondary: var(--color-dark-secondary);
+$color-dark-primary: var(--color-dark-primary);
+$color-light-primary: var(--color-light-primary);
+$color-light-secondary: var(--color-light-secondary);
+$color-light-primary-2: var(--color-light-primary-2);

@@ -1,0 +1,15 @@
+<div class="item">
+  <div class="key">
+    {{listItem.key}}
+  </div>
+  <div class="value"
+       (click)="_isClicked = true"
+       (blur)="_isClicked = false">
+    <span *ngIf="!_isClicked">{{listItem.value}}</span>
+    <input type="text"
+           [ngClass]="{'clicked': _isClicked}"
+           [(ngModel)]="listItem.value"
+           (blur)="_isClicked = false"
+           *ngIf="_isClicked">
+  </div>
+</div>

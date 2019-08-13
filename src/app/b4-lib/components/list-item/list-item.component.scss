@@ -1,0 +1,36 @@
+@import "../../../../style/color";
+
+:host{
+  display: block;
+}
+
+.key {
+  display: inline-block;
+  width: calc(100% - 115px);
+  background: $color-light-secondary;
+  padding: 12px;
+  border: 3px solid $color-dark-secondary;
+  color: $color-light-primary-2;
+  min-height: 24px;
+  strong {
+    color: $color-light-primary-2;
+  }
+}
+
+.value {
+  display: inline-block;
+  width: 60px;
+  background: $color-dark-secondary;
+  padding: 12px;
+  color: $color-light-secondary;
+  font-weight: 200;
+  min-height: 24px;
+  input {
+    border: none;
+    width: 80%;
+    background: var(--color-dark-secondary);
+  }
+  .clicked {
+    background: white;
+  }
+}

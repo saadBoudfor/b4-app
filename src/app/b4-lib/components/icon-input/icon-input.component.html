@@ -1,0 +1,12 @@
+<div class="input wrapper">
+  <input type="text" [(ngModel)]="inputIcon.value" placeholder="{{inputIcon.placeholder}}" (click)=reset() (keyup)="hideSuggestion = false; onValueChanged(inputIcon.value)">
+  <i class="icon material-icons">{{inputIcon.iconName}}</i>
+</div>
+
+<div *ngIf="!hideSuggestion" class="suggestion-list">
+    <div class="suggestion"
+    *ngFor="let suggestion of filter(inputIcon.value)"
+    (click)="hideSuggestion = true; inputIcon.value = suggestion; onValueChanged(suggestion);">
+    {{suggestion}}
+  </div>
+</div>

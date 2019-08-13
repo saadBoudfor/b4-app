@@ -1,0 +1,101 @@
+@import "color";
+
+button {
+  padding: 12px;
+  width: 100%;
+  border: none;
+  outline: none;
+  background-color: white;
+  color: $color-dark-primary;
+  font-size: 18px;
+  font-weight: 700;
+
+  &.animation {
+    &.transition {
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      animation-name: transition-effect;
+      animation-direction: alternate;
+      animation-duration: 3s;
+    }
+    &.ripple {
+      position: relative;
+      overflow: hidden;
+      transform: translate3d(0, 0, 0);
+    }
+
+    &.ripple:after {
+      content: "";
+      display: block;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      pointer-events: none;
+      background: radial-gradient(circle, #fff 10%, transparent 10.01%) no-repeat 50%;
+      transform: scale(10, 10);
+      opacity: 0;
+      transition: transform .5s, opacity 1s;
+    }
+
+    &.ripple:active:after {
+      transform: scale(0, 0);
+      opacity: .3;
+      transition: 0s;
+    }
+  }
+
+
+  &:disabled {
+    opacity: 0.5;
+  }
+
+  // *********** end common styles ****************.
+
+  &.primary {
+    background-color: $color-dark-primary;
+    color: $color-light-secondary;
+    &.reverse {
+      color: $color-dark-primary;
+      background-color: $color-light-secondary;
+      border: 1px solid $color-dark-primary;
+    }
+    &.outline {
+      color: $color-dark-primary;
+      background-color: $color-light-secondary;
+      border: none;
+    }
+  }
+
+  &.secondary {
+    background-color: $color-dark-secondary;
+    color: $color-light-secondary;
+    &.reverse {
+      color: $color-dark-secondary;
+      background-color: $color-light-secondary;
+      border: 1px solid $color-dark-secondary;
+    }
+    &.outline {
+      color: $color-dark-secondary;
+      background-color: $color-light-secondary;
+      border: none;
+    }
+  }
+
+}
+
+@keyframes transition-effect {
+  0% {
+    opacity: 0;
+    width: 10%;
+  }
+
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+    width: 80%;
+  }
+}
