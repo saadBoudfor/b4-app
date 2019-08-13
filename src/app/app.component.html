@@ -12,13 +12,19 @@
         <icon-input [inputIcon]="inputObject" (valueChanged)=updateIngredient($event)></icon-input>
       </div>
       <div class="col-2">
-        <button class="primary animation ripple" (click)="addIngredient()" [disabled]="newIngredient.key === ''">add</button>
+        <button class="primary animation transition" (click)="addIngredient()" [disabled]="newIngredient.key === ''" type="submit">add</button>
       </div>
     </div>
     <div class="row">
       <div class="col-12">
         <!-- This content will take up 6/12 (or 1/2) of the container -->
         <list-item *ngFor="let ingredient of ingredientList" [listItem]="ingredient"></list-item>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12">
+        <!-- This content will take up 6/12 (or 1/2) of the container -->
+        <progress-bar [progressBar]="{active: 2, max: 4}"></progress-bar>
       </div>
     </div>
   </div>
