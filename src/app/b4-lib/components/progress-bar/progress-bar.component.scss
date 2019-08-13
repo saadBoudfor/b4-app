@@ -1,0 +1,29 @@
+@import "../../../../style/color";
+
+#inner {
+  display: table;
+  margin: 0 auto;
+  div {
+    display: inline-block;
+    margin: 5px;
+    &.bar {
+      background: $color-dark-secondary;
+      width: 100px;
+      height: 10px;
+    }
+    &.circle {
+      border: 1px solid $color-dark-secondary;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      &.active {
+        background: $color-dark-secondary;
+        border: 1px solid $color-dark-secondary;
+      }
+    }
+  }
+}
+
+#outer {
+  width:100%
+}

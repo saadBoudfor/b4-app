@@ -1,0 +1,9 @@
+<div id="outer">
+    <div id="inner">
+        <div class="bar"></div>
+        <ng-container *ngFor="let i of rangeMax; let $index=index">
+            <div class="circle"  [ngClass]="{'active': $index === progressBar.active - 1}"></div>
+        </ng-container>
+        <div class="bar"></div>
+    </div>
+  </div>

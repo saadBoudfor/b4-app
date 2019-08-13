@@ -15,7 +15,7 @@ export class AppComponent implements OnInit{
 
   ngOnInit(): void {
     this.ingredientList = [];
-    this.inputObject = {iconName: 'date_range', placeholder: 'Ajouter un produit...', value: this.newIngredient.key};
+    this.inputObject = {iconName: 'date_range', placeholder: 'Ajouter un produit...', value: ''};
   }
 
   updateIngredient(newValue: string) {
@@ -26,6 +26,7 @@ export class AppComponent implements OnInit{
     if (this.newIngredient.key !== '') {
       this.ingredientList.push(this.newIngredient);
       this.newIngredient = {key: '', value: ''};
+      this.inputObject = {iconName: 'date_range', placeholder: 'Ajouter un produit...', value: ''};
     }
   }
 }
